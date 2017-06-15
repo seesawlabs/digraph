@@ -58,7 +58,7 @@ Examples:
 
 Check the [core](./src/digraph/core.clj) namespace for other possible operations, as well as
 the `clojure.spec` definitions. These can be very helpful for extending directed graphs into,
-say, a network. For an example, check out [kranium](https://github.com/cjsauer/kranium).
+say, a network. For an example, check out [kranium](https://github.com/seesawlabs/kranium).
 
 ## Development
 
