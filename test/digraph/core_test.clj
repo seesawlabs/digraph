@@ -9,7 +9,7 @@
 
 (def degree-sum-property
   (prop/for-all [g (s/gen ::d/digraph)]
-                (let [verts (:vertices g)
+                (let [verts (:nodes g)
                       indegree-sum (apply + (map (partial d/indegree g) verts))
                       outdegree-sum (apply + (map (partial d/outdegree g) verts))
                       total-edges (count (:edges g))]

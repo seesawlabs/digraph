@@ -11,7 +11,7 @@ Features so far:
 - Topological sort via Kahn's algorithm
 - Cycle detection
 - Indegree and outdegree
-- Sink/source/internal/stranded vertex operations
+- Sink/source/internal/stranded node operations
 
 The use of specs does indeed require Clojure version `>= 1.9.0`.
 
@@ -28,7 +28,7 @@ Require the namespace:
 Define a graph:
 
 ```Clojure
-(def g {:vertices #{1 2 3}
+(def g {:nodes #{1 2 3}
         :edges #{[1 2] [2 3] [1 3]}})
 
 ; Check that the graph conforms to the spec
@@ -43,11 +43,11 @@ Define a graph:
 Examples:
 
 ```Clojure
-; Find all the sink vertices
-(filter #(d/sink? g %) (:vertices g))
+; Find all the sink nodes
+(filter #(d/sink? g %) (:nodes g))
 => (3)
 
-; Sort vertices topologically
+; Sort nodes topologically
 (d/topological-sort g)
 => [1 2 3]
 
