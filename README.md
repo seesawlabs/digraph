@@ -1,5 +1,7 @@
 # digraph
 
+[![Build Status](https://travis-ci.org/seesawlabs/digraph.svg?branch=master)](https://travis-ci.org/seesawlabs/digraph)
+
 Directed graph library written in pure Clojure. Many algorithms have yet to be written, but
 it's polished enough to publish and open to the community. Pull requests encouraged!
 
@@ -10,6 +12,8 @@ Features so far:
 - Cycle detection
 - Indegree and outdegree
 - Sink/source/internal/stranded vertex operations
+
+The use of specs does indeed require Clojure version `>= 1.9.0`.
 
 ## Usage
 
