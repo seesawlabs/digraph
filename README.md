@@ -13,6 +13,8 @@ Features so far:
 
 ## Usage
 
+[![Clojars Project](https://img.shields.io/clojars/v/digraph.svg)](https://clojars.org/digraph)
+
 Require the namespace:
 
 ```Clojure
