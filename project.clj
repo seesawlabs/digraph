@@ -1,4 +1,4 @@
-(defproject digraph "0.2.0"
+(defproject digraph "0.3.0"
   :description "Directed graph library written in pure Clojure"
   :url "https://github.com/cjsauer/digraph"
   :license {:name "Eclipse Public License"
