@@ -28,8 +28,7 @@ Require the namespace:
 Define a graph:
 
 ```Clojure
-(def g {:nodes #{1 2 3}
-        :edges #{[1 2] [2 3] [1 3]}})
+(def g (make-digraph #{1 2 3} [1 2] [1 3] [1 4]))
 
 ; Check that the graph conforms to the spec
 (s/valid? ::d/digraph g)

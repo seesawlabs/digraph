@@ -6,6 +6,22 @@
 
 ;""""""""""""""""""""""""""""""""""""""""
 ;
+; Record definition
+;
+;""""""""""""""""""""""""""""""""""""""""
+(defrecord Digraph [nodes edges])
+
+(defn make-digraph
+  "Constructs a new directed graph."
+  [node-set & edges]
+  (->Digraph (into #{} node-set) (into #{} edges)))
+
+(s/fdef make-digraph
+        :args (s/cat :nodes ::nodes :edges (s/* ::edge))
+        :ret #(instance? Digraph %))
+
+;""""""""""""""""""""""""""""""""""""""""
+;
 ; Directed graph operations
 ;
 ;""""""""""""""""""""""""""""""""""""""""
