@@ -128,10 +128,12 @@
 
 (s/def ::node pos-int?)
 (s/def ::nodes (s/coll-of ::node :kind set? :into #{}))
-(s/def ::edge (s/tuple ::node ::node))
+(s/def ::source-node ::node)
+(s/def ::target-node ::node)
+(s/def ::edge (s/tuple ::source-node ::target-node))
 (s/def ::edges (s/coll-of ::edge :kind set? into #{}))
 (s/def ::digraph-type (s/and (s/keys :req-un [::nodes ::edges])
-                             #(cset/subset? (reduce (fn [a x] (into a x)) #{} (:edges %))
+                             #(cset/subset? (into #{} (apply concat (:edges %)))
                                             (:nodes %))))
 
 (defn digraph-gen
